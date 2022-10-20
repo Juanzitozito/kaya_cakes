@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\SaboresController;
+use App\Http\Controllers\EntregasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +17,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.home');
 });
+
+/* Route::get('/usuarios', [UsuarioController::class, 'index']);*/
+Route::get('/usuarios/show/{id}', [UsuarioController::class, 'show'])->where('id', '[0-9]+');
+Route::get('/usuarios/create', [UsuarioController::class, 'create']);
+Route::post('/usuarios/store', [UsuarioController::class, 'store']);
+Route::get('/usuarios/edit/{id}', [UsuarioController::class, 'edit'])->where('id', '[0-9]+');
+Route::post('/usuarios/update', [UsuarioController::class, 'update']);
+Route::get('/usuarios/destroy/{id}', [UsuarioController::class, 'destroy'])->where('id', '[0-9]+');
+
+Route::get('/sabores', [SaboresController::class, 'index']);
+Route::get('/sabores/show/{id}', [SaboresController::class, 'show'])->where('id', '[0-9]+');
+Route::get('/sabores/create', [SaboresController::class, 'create']);
+Route::post('/sabores/store', [SaboresController::class, 'store']);
+Route::get('/sabores/edit/{id}', [SaboresController::class, 'edit'])->where('id', '[0-9]+');
+Route::post('/sabores/update', [SaboresController::class, 'update']);
+Route::get('/sabores/destroy/{id}', [SaboresController::class, 'destroy'])->where('id', '[0-9]+');
+
+Route::get('/entregas', [EntregasController::class, 'index']); 
+/* Route::get('/entregas/show/{id}', [EntregasController::class, 'show'])->where('id', '[0-9]+'); */
+Route::get('/entregas/create', [EntregasController::class, 'create']);
+Route::post('/entregas/store', [EntregasController::class, 'store']);
+Route::get('/entregas/edit/{id}', [EntregasController::class, 'edit'])->where('id', '[0-9]+');
+Route::post('/entregas/update', [EntregasController::class, 'update']);
+Route::get('/entregas/destroy/{id}', [EntregasController::class, 'destroy'])->where('id', '[0-9]+');
