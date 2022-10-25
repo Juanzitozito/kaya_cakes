@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home.home');
+    return view('home');
 });
 
 /* Route::get('/usuarios', [UsuarioController::class, 'index']);*/
@@ -36,7 +36,7 @@ Route::get('/sabores/edit/{id}', [SaboresController::class, 'edit'])->where('id'
 Route::post('/sabores/update', [SaboresController::class, 'update']);
 Route::get('/sabores/destroy/{id}', [SaboresController::class, 'destroy'])->where('id', '[0-9]+');
 
-Route::get('/entregas', [EntregasController::class, 'index']); 
+Route::get('/entregas', [EntregasController::class, 'index']);
 /* Route::get('/entregas/show/{id}', [EntregasController::class, 'show'])->where('id', '[0-9]+'); */
 Route::get('/entregas/create', [EntregasController::class, 'create']);
 Route::post('/entregas/store', [EntregasController::class, 'store']);
