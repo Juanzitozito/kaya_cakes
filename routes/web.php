@@ -20,7 +20,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-/* Route::get('/usuarios', [UsuarioController::class, 'index']);*/
+Route::get('/login', [UsuarioController::class, 'redirectlogin']);
+Route::post('/login/send', [UsuarioController::class, 'login']);
 Route::get('/usuarios/show/{id}', [UsuarioController::class, 'show'])->where('id', '[0-9]+');
 Route::get('/usuarios/create', [UsuarioController::class, 'create']);
 Route::post('/usuarios/store', [UsuarioController::class, 'store']);

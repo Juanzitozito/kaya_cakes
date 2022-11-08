@@ -1,10 +1,26 @@
-body{
-    background-color:rgb(248, 205, 212);
+body {
+    background-color: rgb(248, 205, 212);
 }
 
-.nav-item
-{
-    background-color: rgba(255, 20, 145, 0.575);
+.nav-item {
+    background-color: rgba(255, 20, 145, 0.322);
+    border-radius: 50px;
     margin-right: 2rem;
-    
+}
+
+.nav-item:hover {
+    background-color: rgba(175, 61, 175, 0.726);
+    transition: 0.5s;
+}
+
+#container-login {
+    background-color: white;
+    margin-top: 3rem;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+.btn{
+    background-color: blueviolet;
+    color: aliceblue;
+    margin-top: 1rem;
 }
