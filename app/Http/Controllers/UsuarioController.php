@@ -13,22 +13,28 @@ class UsuarioController extends Controller
         return view('usuario.login');
     }
 
+    public function create(){
+        return view('usuario.create');
+    }
+
     public function login(Request $form)
     {
-        $credenciais = $form->validate([
-            'username' => ['required'],
-            'password' => ['required'],
-        ]);
+        if ($form->isMethod('POST')) {
+            $credenciais = $form->validate([
+                'username' => ['required'],
+                'password' => ['required'],
+            ]);
 
 
-        if (Auth::attempt($credenciais)) {
-            session()->regenerate();
-            return redirect()->route('/');
-        } else {
-            return redirect()->route('login')->with(
-                'erro',
-                'Usuário ou senha inválidos.'
-            );
+            if (Auth::attempt($credenciais)) {
+                session()->regenerate();
+                return redirect('/');
+            } else {
+                return redirect('/login')->with(
+                    'erro',
+                    'Usuário ou senha inválidos.'
+                );
+            }
         }
     }
 }
