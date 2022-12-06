@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Sabores</a>
+            <a class="nav-link active" aria-current="page" href="/sabores">Sabores</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Perfil</a>

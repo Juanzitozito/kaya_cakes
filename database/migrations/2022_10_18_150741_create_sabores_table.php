@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('sabor');
             $table->decimal('preco', 10, 6);
             $table->integer('disponivel');
+            $table->string('descricao')->nullable();
+            $table->string('foto');
             $table->timestamps();
         });
     }

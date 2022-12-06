@@ -12,4 +12,8 @@ class SaboresController extends Controller
 
         return view('sabores.index', ['sabores' => $sabores]);
     }
+
+    public function create(){
+        return view('sabores.create');
+    }
 }
