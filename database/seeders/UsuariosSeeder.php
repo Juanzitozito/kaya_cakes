@@ -22,7 +22,7 @@ class UsuariosSeeder extends Seeder
             'name' => 'a',
             'username' => 'a',
             'email' => Str::random(10).'@gmail.com',
-            'password' => Hash::make('password'),
+            'password' => Hash::make('123'),
             'dtnasc' => Carbon::now(),
         ]);
 
@@ -32,6 +32,7 @@ class UsuariosSeeder extends Seeder
             'email' => 'kayacordova@gmail.com',
             'password' => Hash::make('admin'),
             'dtnasc' => Carbon::now(),
+            'admin' => 1
         ]);
     }
 }

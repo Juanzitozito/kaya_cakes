@@ -11,7 +11,7 @@
         </div>
         <div class="form-group mt-1">
           <label for="preco">Valor</label>
-          <input type="number" class="form-control" name="preco" id="preco" required>
+          <input type="text" class="form-control" name="preco" id="preco" required>
         </div>
         <div class="form-group mt-1">
             <label for="descricao">Sabor</label>
