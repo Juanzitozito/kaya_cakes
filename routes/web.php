@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\SaboresController;
 use App\Http\Controllers\EntregasController;
@@ -47,3 +48,9 @@ Route::post('/entregas/store', [EntregasController::class, 'store']);
 Route::get('/entregas/edit/{id}', [EntregasController::class, 'edit'])->where('id', '[0-9]+');
 Route::post('/entregas/update', [EntregasController::class, 'update']);
 Route::get('/entregas/destroy/{id}', [EntregasController::class, 'destroy'])->where('id', '[0-9]+');
+
+
+Route::get('/cart', [CartController::class, 'cartList']);
+Route::get('/addcart/{id}', [CartController::class, 'addToCart']);
+Route::post('/remove', [CartController::class, 'removeCart'])->name('cart.remove');
+Route::post('/clear', [CartController::class, 'clearAllCart'])->name('cart.clear');

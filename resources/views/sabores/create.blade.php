@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="container" id="container-login">
-    <h3>Login</h3>
+    <h3>Criar sabor</h3>
     <form method="POST" enctype="multipart/form-data" action="/sabores/store">
         @csrf
         <div class="form-group mt-1">
