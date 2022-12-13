@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('sabores', function (Blueprint $table) {
             $table->id();
             $table->string('sabor');
-            $table->decimal('preco', 10, 6);
+            $table->decimal('preco', 30, 6);
             $table->integer('disponivel');
             $table->string('descricao')->nullable();
             $table->string('foto');

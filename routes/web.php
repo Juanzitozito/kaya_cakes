@@ -37,6 +37,8 @@ Route::post('/sabores/store', [SaboresController::class, 'store']);
 Route::get('/sabores/edit/{id}', [SaboresController::class, 'edit'])->where('id', '[0-9]+');
 Route::post('/sabores/update', [SaboresController::class, 'update']);
 Route::get('/sabores/destroy/{id}', [SaboresController::class, 'destroy'])->where('id', '[0-9]+');
+Route::get('/sabores/addcarrinho/{id}', [SaboresController::class, 'addcarrinho'])->where('id', '[0-9]+');
+
 
 Route::get('/entregas', [EntregasController::class, 'index']);
 /* Route::get('/entregas/show/{id}', [EntregasController::class, 'show'])->where('id', '[0-9]+'); */

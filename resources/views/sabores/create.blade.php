@@ -14,13 +14,21 @@
           <input type="text" class="form-control" name="preco" id="preco" required>
         </div>
         <div class="form-group mt-1">
-            <label for="descricao">Sabor</label>
+            <label for="descricao">Descrição</label>
             <input type="text" class="form-control" name="descricao" id="descricao">
         </div>
         <div>
             <label for="foto">Imagem</label>
             <input type="file" id="foto" name="foto" class="form-control" required>
         </div>
+        <div class="mx-2">
+          <h4>Disponível?</h4>
+          <input type="radio" name="disponivel" id="sim" value="1">
+          <label for="sim">Sim</label><br>
+
+          <input type="radio" name="disponivel" id="nao" value="0">
+          <label>Não</label>
+      </div>
         <button type="submit" class="btn">criar</button>
     </form>
 </div>
